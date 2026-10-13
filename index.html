@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Missas em Nova Serrana</title>
+  <meta name="description" content="Horários de missa, confissão e adoração nas igrejas de Nova Serrana (MG).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Atkinson+Hyperlegible:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#6b1824" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#3d1118" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2052%22%3E%3Crect%20width%3D%2240%22%20height%3D%2252%22%20rx%3D%226%22%20fill%3D%22%236b1824%22%2F%3E%3Cpath%20d%3D%22M17.5%2010h5v9h8v5h-8v20h-5V24h-8v-5h8z%22%20fill%3D%22%23d4ad5e%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <p class="aviso-exemplo">Horários do site da <a href="https://diocesedivinopolis.org.br/missas/">Diocese de Divinópolis</a>. Na dúvida, confirme na paróquia.</p>
+
+  <header class="topo">
+    <!-- Rosácea: janela redonda de vitral (só enfeite) -->
+    <svg class="rosacea" viewBox="-60 -60 120 120" fill="none" stroke="currentColor" aria-hidden="true"><circle r="58" stroke-width="1.6"/><circle r="53"/><circle r="15"/><circle r="6" stroke-width="1.6"/><line x1="15.0" y1="0.0" x2="53.0" y2="0.0"/><circle cx="40.0" cy="0.0" r="9"/><circle cx="23.2" cy="6.2" r="5"/><line x1="13.0" y1="7.5" x2="45.9" y2="26.5"/><circle cx="34.6" cy="20.0" r="9"/><circle cx="17.0" cy="17.0" r="5"/><line x1="7.5" y1="13.0" x2="26.5" y2="45.9"/><circle cx="20.0" cy="34.6" r="9"/><circle cx="6.2" cy="23.2" r="5"/><line x1="0.0" y1="15.0" x2="0.0" y2="53.0"/><circle cx="0.0" cy="40.0" r="9"/><circle cx="-6.2" cy="23.2" r="5"/><line x1="-7.5" y1="13.0" x2="-26.5" y2="45.9"/><circle cx="-20.0" cy="34.6" r="9"/><circle cx="-17.0" cy="17.0" r="5"/><line x1="-13.0" y1="7.5" x2="-45.9" y2="26.5"/><circle cx="-34.6" cy="20.0" r="9"/><circle cx="-23.2" cy="6.2" r="5"/><line x1="-15.0" y1="0.0" x2="-53.0" y2="0.0"/><circle cx="-40.0" cy="0.0" r="9"/><circle cx="-23.2" cy="-6.2" r="5"/><line x1="-13.0" y1="-7.5" x2="-45.9" y2="-26.5"/><circle cx="-34.6" cy="-20.0" r="9"/><circle cx="-17.0" cy="-17.0" r="5"/><line x1="-7.5" y1="-13.0" x2="-26.5" y2="-45.9"/><circle cx="-20.0" cy="-34.6" r="9"/><circle cx="-6.2" cy="-23.2" r="5"/><line x1="-0.0" y1="-15.0" x2="-0.0" y2="-53.0"/><circle cx="-0.0" cy="-40.0" r="9"/><circle cx="6.2" cy="-23.2" r="5"/><line x1="7.5" y1="-13.0" x2="26.5" y2="-45.9"/><circle cx="20.0" cy="-34.6" r="9"/><circle cx="17.0" cy="-17.0" r="5"/><line x1="13.0" y1="-7.5" x2="45.9" y2="-26.5"/><circle cx="34.6" cy="-20.0" r="9"/><circle cx="23.2" cy="-6.2" r="5"/></svg>
+    <div class="topo-dentro">
+      <svg class="vitral" viewBox="0 0 40 52" aria-hidden="true">
+        <path d="M3 50V20C3 10 11 3 20 2c9 1 17 8 17 18v30z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M17.5 12h5v9h8v5h-8v18h-5V26h-8v-5h8z" fill="currentColor"/>
+      </svg>
+      <div class="topo-textos">
+      <h1>Nova Serrana</h1>
+      <p class="hoje" id="hoje">Hoje</p>
+      </div>
+    </div>
+    <nav class="abas" aria-label="Menu do site">
+      <a class="aba" href="#missas" data-tela="missas">Missas</a>
+      <a class="aba" href="#confissoes" data-tela="confissoes">Confissões</a>
+      <a class="aba" href="#adoracoes" data-tela="adoracoes">Adorações</a>
+      <a class="aba" href="#igrejas" data-tela="igrejas">Igrejas</a>
+      <a class="aba" href="#eventos" data-tela="eventos" id="aba-eventos">Eventos</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- TELA 1: HORÁRIOS -->
+    <section id="tela-horarios" class="tela">
+      <div class="filtros">
+      <h2 class="rotulo">Qual dia?</h2>
+      <div class="dias" id="dias" role="group" aria-label="Dia da semana"></div>
+
+      <h2 class="rotulo">Qual período?</h2>
+      <div class="periodos" id="periodos" role="group" aria-label="Período do dia">
+        <button data-periodo="todos" aria-pressed="true">Todos</button>
+        <button data-periodo="manha" aria-pressed="false">Manhã<small>até 12h</small></button>
+        <button data-periodo="tarde" aria-pressed="false">Tarde<small>12h–18h</small></button>
+        <button data-periodo="noite" aria-pressed="false">Noite<small>após 18h</small></button>
+      </div>
+      </div>
+
+      <div class="resultado">
+      <div class="titulo-com-icone">
+        <span class="icone-tipo" id="icone-tipo" aria-hidden="true"></span>
+        <h2 class="titulo-lista" id="titulo-lista">Missas de hoje</h2>
+      </div>
+      <div class="ornamento" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6.5 0h3v4.5H14v3H9.5V16h-3V7.5H2v-3h4.5z"/></svg></div>
+      <p class="contagem" id="contagem"></p>
+      <ol class="lista" id="lista"></ol>
+      <p class="vazio" id="vazio" hidden>Nenhum horário neste dia e período.</p>
+      </div>
+    </section>
+
+    <!-- TELA 2: IGREJAS -->
+    <section id="tela-igrejas" class="tela" hidden>
+      <label class="rotulo" for="escolha-igreja">Qual igreja?</label>
+      <select id="escolha-igreja" class="seletor"></select>
+      <div id="ficha-igreja"></div>
+    </section>
+
+    <!-- TELA 3: EVENTOS -->
+    <section id="tela-eventos" class="tela" hidden>
+      <h2 class="titulo-lista">Eventos das paróquias</h2>
+      <div class="ornamento" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6.5 0h3v4.5H14v3H9.5V16h-3V7.5H2v-3h4.5z"/></svg></div>
+      <div id="lista-eventos"></div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="fachada-rodape" id="fachada-rodape" aria-hidden="true"></div>
+    <div class="ornamento" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6.5 0h3v4.5H14v3H9.5V16h-3V7.5H2v-3h4.5z"/></svg></div>
+    <p>Este site é independente. Não tem ligação oficial com a diocese nem com as paróquias.</p>
+    <p>Antes de sair de casa, se puder, confirme o horário com a secretaria da igreja.</p>
+  </footer>
+
+  <!-- A ordem importa: cada arquivo usa coisas dos arquivos de cima. -->
+  <script src="js/dados.js"></script>
+  <script src="js/apoio.js"></script>
+  <script src="js/tela-horarios.js"></script>
+  <script src="js/tela-igrejas.js"></script>
+  <script src="js/tela-eventos.js"></script>
+  <script src="js/abas.js"></script>
+</body>
+</html>
