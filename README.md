@@ -8,7 +8,7 @@ Os horários de missa são reais, tirados do site da Diocese de Divinópolis (ou
 ## Arquivos
 
 - `index.html`: a página.
-- `estilo.css`: as cores, as letras e o layout.
+- `css/estilo.css`: as cores, as letras e o layout.
 - `js/`: a parte que faz a página funcionar, dividida em arquivos:
   - `dados.js`: igrejas, horários, avisos e eventos (depois vai vir do banco de dados).
   - `apoio.js`: funções pequenas usadas por todo o site (ex.: transformar "19:30" em "19h30").

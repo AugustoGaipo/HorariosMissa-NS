@@ -2,7 +2,6 @@
    DADOS REAIS
    Tirados do site da Diocese de Divinópolis (outubro de 2026):
    https://diocesedivinopolis.org.br/missas/
-   Tabela completa: horarios-missas/dados/horarios-missas-nova-serrana.csv
    ========================================================= */
 
 // dia: 0 = domingo, 1 = segunda ... 6 = sábado
